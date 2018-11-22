@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
-            html, body { height: 100%; margin: 0; overflow: hidden; }
+            html, body { height: 100%; margin: 0;  }
             div { height: 100%; width: 100%; margin: 0; }
     </style>
 
@@ -13,14 +13,38 @@
     </head>   
 
     <body style="background-color: #4db6ac">
-        <div class="row teal lighten-2" style="height: 10%;">
-            <h2>SmartHome</h2>
-            <p>Home Automation</p>
+
+        <div class="row teal lighten-2" style="height: 30%;">
+            <div class="col s12">
+                <h2>SmartHome</h2>
+                <p>Home Automation</p>
+            </div>
         </div>
 
         <div class="row cyan lighten-4" style="height: 70%;">
-            <div class="col s3">Info Sensor</div>
-            <div class="col s9">Plano</div>
+
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#plano_scr">Pagina Principal</a></li>
+                    <li class="tab col s3"><a href="#disp_scr">Dispositivos</a></li>
+                    <li class="tab col s3"><a href="#reglas_scr">Reglas</a></li>
+                    <li class="tab col s3"><a href="#conf_scr">Configuracion</a></li>
+                </ul>
+            </div>
+
+            <div id="plano_scr">
+                <div class="col s3">Info Sensor</div>
+                <div class="col s9">Plano</div>
+            </div>
+
+            <div id="disp_scr">
+                <div class="col s12">Lista Dispositivos</div>
+            </div>
+
+            <div id="reglas_scr">
+                <div class="col s3">Lista Reglas</div>
+            </div>
+            
         </div>
 
         <div class="row teal lighten-2"  style="height: 15%;">
