@@ -91,3 +91,8 @@ $('#regla_cuarto_edit').click(function(){
   $("#tabla_reglas").hide();
   $('#regla_cuarto').show();
 });
+
+$('#aceptar_regla').click(function(){
+  $("#regla_cuarto").hide();
+  $('#tabla_reglas').show();
+});
