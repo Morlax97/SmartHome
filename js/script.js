@@ -6,6 +6,7 @@ $(document).ready(function(){
   $('#sensor_sonido').hide();
   $('#actuador_lampara').hide();
   $('#actuador_alarma').hide();
+  $('#regla_cuarto').hide();
 });
 
 $('#sensor_temp_btn').click(function(){
@@ -64,20 +65,29 @@ $('#actuador_alarm_btn').click(function(){
 
 $('#encendido_lampara').click(function(){
   $("#actuador_lampara_valor").text("ON");
+  $("#actuador_lampara_valor_tabla").text("ON");
   $("#actuador_lamp_btn").attr('class', 'btn-floating btn-large waves-effect waves-light yellow');
 });
 
 $('#apagado_lampara').click(function(){
   $("#actuador_lampara_valor").text("OFF");
+  $("#actuador_lampara_valor_tabla").text("OFF");
   $("#actuador_lamp_btn").attr('class', 'btn-floating btn-large waves-effect waves-light black');
 });
 
 $('#encendido_alarma').click(function(){
   $("#actuador_alarma_valor").text("ON");
+  $("#actuador_alarma_valor_tabla").text("ON");
   $("#actuador_alarm_btn").attr('class', 'btn-floating btn-large waves-effect waves-light yellow');
 });
 
 $('#apagado_alarma').click(function(){
   $("#actuador_alarma_valor").text("OFF");
+  $("#actuador_alarma_valor_tabla").text("OFF");
   $("#actuador_alarm_btn").attr('class', 'btn-floating btn-large waves-effect waves-light black');
+});
+
+$('#regla_cuarto_edit').click(function(){
+  $("#tabla_reglas").hide();
+  $('#regla_cuarto').show();
 });

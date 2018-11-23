@@ -122,106 +122,136 @@
             </div>
 
             <div id="disp_scr">
-                <div class="col s9">
-                    <table class="striped">
-                        <thead>
-                          <tr>
-                              <th>Nombre</th>
-                              <th>Tipo</th>
-                              <th>Valor Medido</th>
-                              <th>Reglas Asociadas</th>
-                              <th>Acciones</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Temp_1</td>
-                            <td>Sensor Analogico</td>
-                            <td>25°C</td>
-                            <td>REGLA</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>Luz_1</td>
-                            <td>Sensor Analogico</td>
-                            <td>50lx</td>
-                            <td>REGLA</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>Sonido_1</td>
-                            <td>Sensor Analogico</td>
-                            <td>37db</td>
-                            <td>REGLA</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>Luz_2</td>
-                            <td>Sensor Analogico</td>
-                            <td>66lx</td>
-                            <td>REGLA</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>Lampara_1</td>
-                            <td>Actuador Digital</td>
-                            <td>OFF</td>
-                            <td>REGLA</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>Alarma_1</td>
-                            <td>Actuador Digital</td>
-                            <td>OFF</td>
-                            <td>REGLA</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
-                <div class="col s3">
-                    <a class="waves-effect waves-light btn-large" style="margin-top: 50%; margin-left: 20%"><i class="material-icons left">add</i>Agregar Dispositivo</a>
+                <div id="tabla_disp" class="col s12">
+                    <div class="col s9">
+                        <table class="striped">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Valor Medido</th>
+                                <th>Reglas Asociadas</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Temp_1</td>
+                                <td>Sensor Analogico</td>
+                                <td>25°C</td>
+                                <td>Temp_Cocina</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Luz_1</td>
+                                <td>Sensor Analogico</td>
+                                <td>50lx</td>
+                                <td>Luz_Sala</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Sonido_1</td>
+                                <td>Sensor Analogico</td>
+                                <td>37db</td>
+                                <td>Luz_Cuarto</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Luz_2</td>
+                                <td>Sensor Analogico</td>
+                                <td>66lx</td>
+                                <td>Luz_Cuarto</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Lampara_1</td>
+                                <td>Actuador Digital</td>
+                                <td id="actuador_lampara_valor_tabla">OFF</td>
+                                <td>Luz_Cuarto</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Alarma_1</td>
+                                <td>Actuador Digital</td>
+                                <td id="actuador_alarma_valor_tabla" >OFF</td>
+                                <td>Temp_Cocina</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col s3">
+                        <a class="waves-effect waves-light btn-large" style="margin-top: 50%; margin-left: 20%"><i class="material-icons left">add</i>Agregar Dispositivo</a>
+                    </div>
                 </div>
             </div>
 
             <div id="reglas_scr">
-                <div class="col s12">
-                    <table class="striped">
-                        <thead>
-                          <tr>
-                              <th>Nombre</th>
-                              <th>Sensores</th>
-                              <th>Actuadores</th>
-                              <th>Descripción</th>
-                              <th>Acciones</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Luz_Sala</td>
-                            <td>Luz_1</td>
-                            <td>Lampara_1</td>
-                            <td>Enciende la luz de la sala cuando está oscuro.</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>Temp_Cocina</td>
-                            <td>Temp_1</td>
-                            <td>Alarma_1</td>
-                            <td>Suena la alarma si la temperatura en la cocina es excesiva.</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                          <tr>
-                            <td>Luz_Cuarto</td>
-                            <td>Luz_2,Sonido_1</td>
-                            <td>Lampara_2</td>
-                            <td>Enciende la luz del cuarto cuando está oscuro y detecta que hay alguien.</td>
-                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                <div id="tabla_reglas" class="col s12">           
+                    <div class="col s9">
+                        <table class="striped">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Sensores</th>
+                                <th>Actuadores</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Luz_Sala</td>
+                                <td>Luz_1</td>
+                                <td>Lampara_1</td>
+                                <td>Enciende la luz de la sala cuando está oscuro.</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Temp_Cocina</td>
+                                <td>Temp_1</td>
+                                <td>Alarma_1</td>
+                                <td>Suena la alarma si la temperatura en la cocina es excesiva.</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Luz_Cuarto</td>
+                                <td>Luz_2,Sonido_1</td>
+                                <td>Lampara_2</td>
+                                <td>Enciende la luz del cuarto cuando está oscuro y detecta que hay alguien.</td>
+                                <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a id="regla_cuarto_edit" class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col s3">
+                        <a class="waves-effect waves-light btn-large" style="margin-top: 50%; margin-left: 20%"><i class="material-icons left">add</i>Agregar Regla</a>
+                    </div>
                 </div>
-            </div>  
+                <div id="regla_cuarto" class="col s12">
+                        <div class="col s12" style="height: 5%; position:relative; top:-2%"> 
+                                <div class="card-content white-text">
+                                        <div class="card teal">
+                                            <span class="card-title" style="margin-left: 5%">Editar Regla: Luz_Cuarto</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col s6">
+                            <div class="card-content white-text" style="height: 77%;">
+                                    <div class="card cyan">
+                                        <br><span class="card-title" style="margin-left: 5%">Condiciones</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <div class="card-content white-text" style="height: 77%;">
+                                    <div class="card cyan">
+                                        <br><span class="card-title" style="margin-left: 5%" >Acciones</span>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+            </div>   
         </div>
 
         <div class="row teal lighten-2">
