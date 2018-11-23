@@ -61,3 +61,23 @@ $('#actuador_alarm_btn').click(function(){
   $('#actuador_lampara').hide();
   $('#actuador_alarma').show();
 });
+
+$('#encendido_lampara').click(function(){
+  $("#actuador_lampara_valor").text("ON");
+  $("#actuador_lamp_btn").attr('class', 'btn-floating btn-large waves-effect waves-light yellow');
+});
+
+$('#apagado_lampara').click(function(){
+  $("#actuador_lampara_valor").text("OFF");
+  $("#actuador_lamp_btn").attr('class', 'btn-floating btn-large waves-effect waves-light black');
+});
+
+$('#encendido_alarma').click(function(){
+  $("#actuador_alarma_valor").text("ON");
+  $("#actuador_alarm_btn").attr('class', 'btn-floating btn-large waves-effect waves-light yellow');
+});
+
+$('#apagado_alarma').click(function(){
+  $("#actuador_alarma_valor").text("OFF");
+  $("#actuador_alarm_btn").attr('class', 'btn-floating btn-large waves-effect waves-light black');
+});
