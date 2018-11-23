@@ -3,7 +3,7 @@
     <style>
             html, body { height: 100%; margin: 0; overflow: hidden; font-family: "Montserrat";}
             div { height: 100%; width: 100%; margin: 0; }
-
+            h2 { text-shadow: 3px 3px darkgray; }
     </style>
 
     <head>
@@ -42,8 +42,8 @@
                     <div class="card blue-grey lighten-1" style="height:85%">
                         <div id="sensor_temp" class="card-content white-text">
                             <span class="card-title">Sensor Temp_1</span>
-                            <div class="card cyan" style="height:20%; margin-top:10%;">
-                                <span class="card-title">Valor medido: </span>
+                            <div class="card cyan" style="height:30%; margin-top:10%;">
+                                <br><span class="card-title" style="margin-left: 30%;">Valor medido: </span>
                                 <div> <h4 id="sensor_valor" style="margin-left: 40%;">25°C</h4> </div>
                             </div>
                             <div class="card-action">
@@ -65,15 +65,51 @@
                 </div>
                 <div class="col s9">
                     <img src="imagenes/plano.png" style="width: 100%; height: 87%">
-                    <a class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:10%;"><i id="boton_1" class="material-icons">title</i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:35%; left:50%;"><i id="boton_2" class="material-icons">brightness_5</i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:70%;"><i id="boton_3" class="material-icons">volume_up</i></a>
+                    <a id="sensor_temp_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:10%;"><i id="boton_1" class="material-icons">title</i></a>
+                    <a id="sensor_luz_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:35%; left:50%;"><i id="boton_2" class="material-icons">brightness_5</i></a>
+                    <a id="sensor_sonido_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:70%;"><i id="boton_3" class="material-icons">volume_up</i></a>
 
                 </div>
             </div>
 
             <div id="disp_scr">
-                <div class="col s12">Lista Dispositivos</div>
+                <div class="col s9">
+                    <table>
+                        <thead>
+                          <tr>
+                              <th>Nombre</th>
+                              <th>Tipo</th>
+                              <th>Valor Medido</th>
+                              <th>Reglas Asociadas</th>
+                              <th>Acciones</th>
+                          </tr>
+                        </thead>
+                
+                        <tbody>
+                          <tr>
+                            <td>Temp_1</td>
+                            <td>Sensor Analogico</td>
+                            <td>25°C</td>
+                            <td>REGLA</td>
+                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                          </tr>
+                          <tr>
+                            <td>Luz_1</td>
+                            <td>Sensor Analogico</td>
+                            <td>50lx</td>
+                            <td>REGLA</td>
+                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                          </tr>
+                          <tr>
+                            <td>Sonido_1</td>
+                            <td>Sensor Analogico</td>
+                            <td>37db</td>
+                            <td>REGLA</td>
+                            <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
             </div>
 
             <div id="reglas_scr">
