@@ -4,14 +4,14 @@ $(document).ready(function(){
   $('#sensor_luz').hide();
 });
 
-$('#boton_1').click(function(){
-  $('#sensor_titulo').text("Sensor Temp_1");
-  $('#sensor_valor').text("25°C");
+$('#sensor_temp_btn').click(function(){
+  $('#sensor_temp').show();
+  $('#sensor_luz').hide();
 });
 
-$('#boton_2').click(function(){
-  $('#sensor_titulo').text("Sensor Luz_1");
-  $('#sensor_valor').text("100 l");
+$('#sensor_luz_btn').click(function(){
+  $('#sensor_temp').hide();
+  $('#sensor_luz').show();
 });
 
 $('#boton_3').click(function(){
