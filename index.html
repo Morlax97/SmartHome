@@ -51,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div id="sensor_luz" class="card-content white-text">
+                        <div id="sensor_luz1" class="card-content white-text">
                                 <span class="card-title">Sensor Luz_1</span>
                                 <div class="card cyan" style="height:30%; margin-top:10%;">
                                     <br><span class="card-title" style="margin-left: 30%;">Valor medido: </span>
@@ -61,6 +61,17 @@
                                     <a href="#"><h5 style="margin-left: 15%">Reglas asociadas</h5></a>
                                 </div>
                         </div>
+
+                        <div id="sensor_luz2" class="card-content white-text">
+                            <span class="card-title">Sensor Luz_1</span>
+                            <div class="card cyan" style="height:30%; margin-top:10%;">
+                                <br><span class="card-title" style="margin-left: 30%;">Valor medido: </span>
+                                <div> <h4 id="sensor_luz_valor" style="margin-left: 40%;">50 lx</h4> </div>
+                            </div>
+                            <div class="card-action">
+                                <a href="#"><h5 style="margin-left: 15%">Reglas asociadas</h5></a>
+                            </div>
+                    </div>
 
                         <div id="sensor_sonido" class="card-content white-text">
                                 <span class="card-title">Sensor Sonido_1</span>
@@ -78,8 +89,9 @@
                 <div class="col s9">
                     <img src="imagenes/plano.png" style="width: 100%; height: 87%">
                     <a id="sensor_temp_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:10%;"><i class="material-icons">title</i></a>
-                    <a id="sensor_luz_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:35%; left:50%;"><i class="material-icons">brightness_5</i></a>
-                    <a id="sensor_sonido_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:70%;"><i class="material-icons">volume_up</i></a>
+                    <a id="sensor_luz1_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:50%; left:10%;"><i class="material-icons">brightness_5</i></a>
+                    <a id="sensor_luz2_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:65%;"><i class="material-icons">brightness_5</i></a>
+                    <a id="sensor_sonido_btn" class="btn-floating btn-large waves-effect waves-light red" style="position:relative; bottom:75%; left:66%;"><i class="material-icons">volume_up</i></a>
 
                 </div>
             </div>
@@ -140,24 +152,24 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>REGLA 1</td>
-                            <td>SENSORES 1</td>
-                            <td>ACTUADORES 1</td>
-                            <td>DESCRIPCION 1</td>
+                            <td>Luz_Sala</td>
+                            <td>Luz_1</td>
+                            <td>Lampara_1</td>
+                            <td>Enciende la luz de la sala cuando está oscuro.</td>
                             <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
                           </tr>
                           <tr>
-                            <td>REGLA 2</td>
-                            <td>SENSORES 2</td>
-                            <td>ACTUADORES 2</td>
-                            <td>DESCRIPCION 2</td>
+                            <td>Temp_Cocina</td>
+                            <td>Temp_1</td>
+                            <td>Alarma_1</td>
+                            <td>Suena la alarma si la temperatura en la cocina es excesiva.</td>
                             <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
                           </tr>
                           <tr>
-                            <td>REGLA 3</td>
-                            <td>SENSORES 3</td>
-                            <td>ACTUADORES 3</td>
-                            <td>DESCRIPCION 3</td>
+                            <td>Luz_Cuarto</td>
+                            <td>Luz_2,Sonido_1</td>
+                            <td>Lampara_2</td>
+                            <td>Enciende la luz del cuarto cuando está oscuro y detecta que hay alguien.</td>
                             <td><a class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a><a class="waves-effect waves-light btn-small" style="margin-left: 2%"><i class="material-icons">edit</i></a></td>
                           </tr>
                         </tbody>
