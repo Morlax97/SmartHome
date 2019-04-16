@@ -79,12 +79,26 @@ $('#encendido_alarma').click(function(){
   $("#actuador_alarma_valor").text("ON");
   $("#actuador_alarma_valor_tabla").text("ON");
   $("#actuador_alarm_btn").attr('class', 'btn-floating btn-large waves-effect waves-light yellow');
+  $.ajax({
+  url: "http://url:3000/SensorEncender",
+  type: "GET",
+  success: function(response){
+      console.log(response)
+      }
+  })
 });
 
 $('#apagado_alarma').click(function(){
   $("#actuador_alarma_valor").text("OFF");
   $("#actuador_alarma_valor_tabla").text("OFF");
   $("#actuador_alarm_btn").attr('class', 'btn-floating btn-large waves-effect waves-light black');
+  $.ajax({
+  url: "http://url:3000/SensorApagar",
+  type: "GET",
+  success: function(response){
+      console.log(response)
+      }
+  })
 });
 
 $('#regla_cuarto_edit').click(function(){
